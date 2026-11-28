@@ -18,6 +18,17 @@
   --goal-wish: #E3A977;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html {
   height: 100%;
 }
@@ -42,6 +53,31 @@ body {
   font-family: var(--font-jakarta), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+
+}
+
+.link {
+  color: var(--accent-light);
+  font-weight: 700;
+  transition: color 0.2s ease;
+  text-decoration: underline;
+}
+
+.link:hover,
+.link:focus {
+  color: var(--text-primary);
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
 }
 
 
