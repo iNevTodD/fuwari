@@ -1,21 +1,52 @@
 .button {
-    min-height: 52px;
-    padding: 0 24px;
-    border-radius: 999px;
-    font: inherit;
-    font-weight: 800;
-    font-size: 16px;
-    cursor: pointer;
+  min-height: 54px;
+  padding: 0 24px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
 }
 
 .primary {
-    background: var(--accent);
-    color: var(--on-accent);
-    border: none;
+  background: var(--accent);
+  color: var(--on-accent);
+  border: none;
 }
 
 .secondary {
-    background: var(--surface);
-    color: var(--text-primary);
-    border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+
+@media (hover: hover) {
+  .primary:hover {
+    background: var(--accent-light);
+    box-shadow: 0 8px 24px rgba(217, 163, 138, 0.35);
+  }
+
+  .secondary:hover {
+    background: rgba(255, 255, 255, 0.10);
+  }
+}
+
+.button:active {
+  transform: scale(0.97);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--accent-light);
+  outline-offset: 3px;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
 }
